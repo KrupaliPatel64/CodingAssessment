@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    @await RenderSectionAsync("Head", required: false)
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Film Search</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/MarketingCodingAssignment.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/FilmSearch.css" asp-append-version="true" />
+
+    @await RenderSectionAsync("Styles", required: false)
+</head>
+
+<body>
+   
+    @* <header class="header" style="visibility:hidden">
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light border-bottom box-shadow mb-1">
+    @* <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3"> 
+    <div class="container-fluid title">
+        <a class="navbar-brand headerText" asp-area="" asp-controller="Home" asp-action="Index">Film Search</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbar-items"
+                aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar-items">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link rebuildText" asp-area="" asp-controller="Home" asp-action="ReloadIndex">Rebuild Search Index</a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+    </nav>
+    </header> *@
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2023 - MarketingCodingAssignment
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    
+
+    @await RenderSectionAsync("Scripts", required: false)
+    
+</body>
+</html>
+<style>
+    
+        
+   /*  .headerText {
+        color: #FF4081 !important;
+    }
+
+    .rebuildText {
+        color: #515660 !important;
+        margin-left: 20px; 
+        font-size: 14px; 
+        padding: 8px 16px;
+        border: 1px solid #ccc; 
+        border-radius: 4px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+        transition: all 0.3s ease;
+    }
+
+        .rebuildText:hover {
+            background-color: #ff4081;
+            border-color: #ff4081; 
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
+            color: white;
+        } */
+
+   
+</style>

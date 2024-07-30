@@ -1,0 +1,333 @@
+﻿.body {
+    font-family: Arial, sans-serif;
+}
+
+.material-icons {
+    display: inline-flex;
+    vertical-align: top;
+}
+
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24
+}
+
+#showing-records {
+    font-size: 15px;
+    line-height: 36px;
+    /* vertical-align: top; */
+    /* font-weight: bold; */
+}
+
+.errortext {
+    color: red;
+}
+
+label {
+    /* color: #20212b; */
+    padding-left: 2px;
+    /* font-weight: bold;
+                            font-size: 13px; */
+}
+
+.loading-overlay {
+    background: #ffffff;
+    color: #666666;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: 5000;
+    top: 0;
+    left: 0;
+    float: left;
+    text-align: center;
+    padding-top: 25%;
+    opacity: .80;
+}
+
+.searchArea {
+    /* border: 2px solid rgba(238, 218, 190, 0.5);
+                                                            border-radius: 10px; */
+    /* margin-top: 3px; */
+    /*  padding: 5px; */
+    position: relative;
+    /* backdrop-filter: blur(10px);
+                                                            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  */
+}
+
+.mainDiv {
+    max-width: 65em;
+    margin: 0 auto;
+    /*  background-color: #20212b; */
+    font-family: Arial, sans-serif;
+}
+
+.labelFilters {
+    color: #20212b;
+    padding-left: 2px;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.controlText {
+    color: #20212b;
+    border-color: #ff4081;
+    border-width: 1px; /* Default border width */
+    border-style: solid; /* Border style */
+    border-radius: 4px; /* Rounded corners */
+    padding: 8px; /* Padding inside the control */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    transition: all 0.3s ease; /* Smooth transition for border and shadow */
+}
+
+    .controlText:focus {
+        border-width: 2px; /* Increase border width on focus */
+        box-shadow: 0 0 8px rgba(255, 64, 129, 0.5); /* Add shadow effect on focus */
+        outline: none; /* Remove default outline */
+        z-index: 1; /* Ensure focus effect is on top */
+    }
+
+.select .option:hover {
+    background-color: #ff4081;
+    color: white;
+}
+
+
+.durationBlock {
+}
+
+.voteAverage {
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.releaseDate {
+}
+
+a:link {
+    color: black;
+    text-decoration: none;
+}
+
+a:active {
+    color: #FF4081;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #FF4081;
+    text-decoration: none;
+}
+
+/* .overview{
+                                                            font-size: 11px;
+                                                            color: white;
+
+                                                            margin-left:10px;
+                                                        }
+
+                                                        */
+
+.divider {
+    height: 1px;
+    color: #515660;
+    margin-top: 0px;
+    margin-bottom: 9px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.panel {
+    background-color: #FCFCFC; /* Panel background color */
+    /*  border: 1px solid #ddd5d5;
+                                                    border-radius: 8px;
+                                                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); */
+    /* margin-bottom: 20px;  */
+    padding: 10px; /* Padding inside panels */
+    color: black; /* Text color */
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.panel-heading {
+    /*  padding-bottom: 10px;
+                                                    margin-bottom: 10px;  */
+}
+
+.panel-title {
+    font-size: 15px; /* Title font size */
+    font-weight: bold;
+    color: #FF4081; /* Title color */
+}
+
+.panel-body {
+    font-size: 14px; /* Body font size */
+    line-height: 1.6; /* Line height for readability */
+}
+
+    .panel-body .tagline {
+        font-size: 12px; /* Font size for tagline */
+        color: #515660; /* Tagline color */
+        font-weight: 600;
+    }
+
+    .panel-body .overview {
+        font-size: 13px; /* Font size for overview */
+        color: black; /* Overview color */
+        /* margin-top: 10px;  */
+        /*  border-bottom: 2px solid #FF4081;
+                                                        padding-bottom: 10px */
+    }
+
+.recordsCnt {
+    /* margin-top: 5px; */
+    color: #FF4081 !important;
+    text-align: center;
+}
+
+.autocomplete {
+    position: relative; /* Make sure autocomplete suggestions are positioned relative to the input */
+}
+
+#suggestions {
+    position: absolute; /* Position the suggestions absolutely within the container */
+    top: 100%; /* Place it right below the input field */
+    left: 0;
+    right: 0;
+    max-height: 200px; /* Limit the height of the suggestions list */
+    overflow-y: auto; /* Add scrollbar if suggestions exceed max height */
+    background-color: white; /* Background color of the dropdown */
+    border: 1px solid #ccc; /* Border around the dropdown */
+    border-radius: 4px; /* Rounded corners */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Slight shadow for better visibility */
+    z-index: 1000; /* Ensure the suggestions appear on top of other elements */
+    margin: 0;
+    padding: 0;
+    list-style: none; /* Remove default list styling */
+}
+
+    #suggestions li {
+        padding: 8px; /* Padding inside each suggestion item */
+        cursor: pointer; /* Change cursor to pointer to indicate it's clickable */
+    }
+
+.loading-overlay {
+    display: none; /* Hide the loading overlay by default */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.7); /* Semi-transparent white background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure loading overlay is on top */
+}
+
+.spinner-border {
+    width: 3rem;
+    height: 3rem;
+    border-width: .3em;
+}
+
+#suggestions li:hover {
+    background-color: #FF4081;
+    color: white;
+}
+
+#suggestions li.selected {
+    background-color: #FF4081; /* Background color for selected item */
+    color: white; /* Text color for selected item */
+}
+
+.headerText {
+    color: #FF4081 !important; /* Main text color */
+    font-size: 25px; /* Font size */
+
+    font-weight: 700; /* Bold text */
+    /*  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+                    transition: color 0.3s ease, text-shadow 0.3s ease; */
+}
+
+
+    .headerText:hover {
+        color: #FF80AB;
+    }
+
+    .headerText:focus {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(255, 64, 129, 0.5);
+    }
+
+
+.rebuildText {
+    color: whitesmoke !important;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease !important;
+    background-color: #ff4081 !important;
+}
+
+    .rebuildText:hover {
+        /* Changes background color on hover */
+        border-color: #ff4045; /* Changes border color on hover */
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhances shadow effect on hover */
+        color: white;
+        background-color: #E33B6D;
+    }
+
+.gear-icon-container {
+    position: relative;
+    transform: translateY(-58%);
+    left: 96%;
+    /* z-index: 10; */
+    /* position: fixed;
+                            transform: translateY(-60%);
+
+                            left: 82%; */
+}
+
+.gearBtn button:focus,
+.gearBtn button:focus-visible,
+.gearBtn button:active,
+.gearBtn button:hover,
+.searchBtn button:focus,
+.searchBtn button:active,
+.searchBtn button:hover,
+.searchBtn button:focus-visible {
+    outline: none; /* Remove outline on focus */
+    border: none; /* Ensure no border on focus/active */
+    background: none; /* Remove background on focus/active */
+    box-shadow: none; /* Remove shadow on focus/active */
+}
+
+.searchBtn {
+    outline: none;
+    position: absolute;
+    right: 31px;
+    top: 0;
+    height: 100%;
+}
+
+.gearBtn {
+    outline: none;
+    position: absolute;
+    right: 0px;
+    top: 0;
+    height: 100%;
+}
+
+.error {
+    color: red;
+    font-size: 0.9em;
+    display: none;
+}
+
+.footer {
+    margin-top: auto;
+    background-color: #f8f9fa;
+    padding: 10px 0;
+    border-top: 1px solid #e5e5e5;
+    text-align: center;
+}
